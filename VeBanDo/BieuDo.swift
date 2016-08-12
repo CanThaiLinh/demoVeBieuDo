@@ -9,7 +9,7 @@
 import UIKit
 
 class BanDo: UIView {
-    var title: String = "Dân số"
+    var title: String = "Giá Trị"
     var graphPoints: Array<Int> = []
     var graphTitles: Array<String> = []
     var graphMargin = UIEdgeInsetsMake(30, 40, 34, 30)
