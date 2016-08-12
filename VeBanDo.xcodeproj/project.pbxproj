@@ -12,6 +12,8 @@
 		2CFE3E8F1D587C2D00C9E631 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CFE3E8D1D587C2D00C9E631 /* Main.storyboard */; };
 		2CFE3E911D587C2D00C9E631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CFE3E901D587C2D00C9E631 /* Assets.xcassets */; };
 		2CFE3E941D587C2D00C9E631 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CFE3E921D587C2D00C9E631 /* LaunchScreen.storyboard */; };
+		2CFE3E9C1D587D0200C9E631 /* BieuDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE3E9B1D587D0200C9E631 /* BieuDo.swift */; };
+		2CFE3EA01D587F3300C9E631 /* CellObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE3E9F1D587F3300C9E631 /* CellObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2CFE3E901D587C2D00C9E631 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CFE3E931D587C2D00C9E631 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CFE3E951D587C2D00C9E631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CFE3E9B1D587D0200C9E631 /* BieuDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BieuDo.swift; sourceTree = "<group>"; };
+		2CFE3E9F1D587F3300C9E631 /* CellObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				2CFE3E881D587C2D00C9E631 /* VeBanDo */,
-				2CFE3E871D587C2D00C9E631 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +52,7 @@
 				2CFE3E861D587C2D00C9E631 /* VeBanDo.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2CFE3E881D587C2D00C9E631 /* VeBanDo */ = {
@@ -56,6 +60,9 @@
 			children = (
 				2CFE3E891D587C2D00C9E631 /* AppDelegate.swift */,
 				2CFE3E8B1D587C2D00C9E631 /* ViewController.swift */,
+				2CFE3E9B1D587D0200C9E631 /* BieuDo.swift */,
+				2CFE3E9F1D587F3300C9E631 /* CellObject.swift */,
+				2CFE3E871D587C2D00C9E631 /* Products */,
 				2CFE3E8D1D587C2D00C9E631 /* Main.storyboard */,
 				2CFE3E901D587C2D00C9E631 /* Assets.xcassets */,
 				2CFE3E921D587C2D00C9E631 /* LaunchScreen.storyboard */,
@@ -137,6 +144,8 @@
 			files = (
 				2CFE3E8C1D587C2D00C9E631 /* ViewController.swift in Sources */,
 				2CFE3E8A1D587C2D00C9E631 /* AppDelegate.swift in Sources */,
+				2CFE3EA01D587F3300C9E631 /* CellObject.swift in Sources */,
+				2CFE3E9C1D587D0200C9E631 /* BieuDo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
