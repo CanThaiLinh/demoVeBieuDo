@@ -25,6 +25,27 @@
                                     <constraint firstAttribute="width" secondItem="a0X-b1-mvl" secondAttribute="height" multiplier="290:193" id="pnp-e6-jgK"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hK6-QF-tdl">
+                                <rect key="frame" x="14" y="353" width="76" height="30"/>
+                                <state key="normal" title="Translation"/>
+                                <connections>
+                                    <action selector="translationPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M1d-yw-2FU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsD-wp-dgM">
+                                <rect key="frame" x="248" y="353" width="94" height="30"/>
+                                <state key="normal" title="Rotate"/>
+                                <connections>
+                                    <action selector="rotatePress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kQO-7g-ftC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lzz-jB-gPA">
+                                <rect key="frame" x="145" y="353" width="68" height="30"/>
+                                <state key="normal" title="Scale"/>
+                                <connections>
+                                    <action selector="scalePress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ToH-Jd-UBb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

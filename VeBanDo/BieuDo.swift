@@ -61,6 +61,7 @@ class BanDo: UIView {
         
 
     }
+    
     func veKhungBieuDo(){
         
         let topLeftPoint : CGPoint =  CGPoint(x: self.graphMargin.left, y: self.graphMargin.top)
@@ -96,7 +97,7 @@ class BanDo: UIView {
         
         let shapeLayer = CAShapeLayer()
         
-        shapeLayer.fillColor = UIColor.redColor().CGColor
+//        shapeLayer.fillColor = UIColor.redColor().CGColor
         shapeLayer.strokeColor = UIColor.clearColor().CGColor
         shapeLayer.path = muiTenPath.CGPath
         self.layer.addSublayer(shapeLayer)
@@ -159,16 +160,16 @@ class BanDo: UIView {
         let shapeLayer = CAShapeLayer()
         shapeLayer.fillColor = UIColor.clearColor().CGColor
         shapeLayer.strokeColor = UIColor.redColor().CGColor
-        shapeLayer.lineWidth = 1
+        shapeLayer.lineWidth = 2
         shapeLayer.path = graphPath.CGPath
         self.layer.addSublayer(shapeLayer)
         
         // them hieu ung animation
         
         let drawAnimation: CABasicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        drawAnimation.duration            = 2.0
+        drawAnimation.duration            = 5.0
         drawAnimation.repeatCount         = 1.0
-        drawAnimation.fromValue = NSNumber(float: 0)
+        drawAnimation.fromValue = NSNumber(float: 0.5)
         drawAnimation.toValue   = NSNumber(float: 1)
         drawAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         shapeLayer.addAnimation(drawAnimation, forKey: "tenGiChaDuoc")
@@ -220,13 +221,14 @@ class BanDo: UIView {
         self.layer.addSublayer(shapeLayer)
         
         
-//        let drawAnimation: CABasicAnimation = CABasicAnimation(keyPath: "bounds")
-//        drawAnimation.duration            = 2.0
-//        drawAnimation.repeatCount         = 1
-//        drawAnimation.fromValue = NSValue(CGRect: CGRect(x: 0, y: 0, width: 0, height: 0))
-//        drawAnimation.toValue   = NSValue(CGRect: CGRect(x: 0, y: 0, width: 120, height: 50))
-//        drawAnimation.autoreverses = true
-//        shapeLayer.addAnimation(drawAnimation, forKey: "tenGiChaDuoc2")
+        let drawAnimation: CABasicAnimation = CABasicAnimation(keyPath: "fillcolor")
+        drawAnimation.duration            = 2.0
+        drawAnimation.repeatCount         = 1
+        drawAnimation.fillMode = kCAFillModeForwards
+        drawAnimation.fromValue = NSValue(CGRect: CGRect(x: 0, y: 0, width: 0, height: 0))
+        drawAnimation.toValue   = NSValue(CGRect: CGRect(x: 0, y: 0, width: 120, height: 50))
+        drawAnimation.autoreverses = true
+        shapeLayer.addAnimation(drawAnimation, forKey: "tenGiChaDuoc2")
         
         
 
@@ -260,5 +262,46 @@ class BanDo: UIView {
         point.y = frame.height - self.graphMargin.bottom - y
         
         return point
+    }
+    
+    //MARK: 3D transition
+    func translateView(){
+        // tinh tien
+        let tranformAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform")
+        tranformAnimation.duration            = 2.0
+        tranformAnimation.repeatCount         = 0
+        tranformAnimation.removedOnCompletion = false
+        tranformAnimation.fillMode = kCAFillModeForwards
+        
+        tranformAnimation.toValue = NSValue(CATransform3D: CATransform3DMakeTranslation(80, 130, 3))
+        
+        self.layer.addAnimation(tranformAnimation, forKey: "transform")
+
+    }
+    func scaleVIew(){
+        // co dan
+        let tranformAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform")
+        tranformAnimation.duration            = 2.0
+        tranformAnimation.repeatCount         = 0
+//        tranformAnimation.removedOnCompletion = false
+//        tranformAnimation.fillMode = kCAFillModeForwards
+        
+        tranformAnimation.toValue = NSValue(CATransform3D: CATransform3DMakeScale(0.5, 2.5, 1))
+        
+        self.layer.addAnimation(tranformAnimation, forKey: "transform")
+    }
+    func rotateView(){
+        // co dan
+        
+        let tranformAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform")
+        tranformAnimation.duration            = 2.0
+        tranformAnimation.repeatCount         = 0
+        tranformAnimation.removedOnCompletion = false
+        tranformAnimation.fillMode = kCAFillModeForwards
+        
+        tranformAnimation.toValue = NSValue(CATransform3D: CATransform3DMakeRotation(CGFloat( M_PI  ), 0, 0, 2))
+        
+        self.layer.addAnimation(tranformAnimation, forKey: "transform")
+        
     }
 }

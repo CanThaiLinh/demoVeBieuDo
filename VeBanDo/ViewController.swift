@@ -32,6 +32,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //MARK: 3D transition
+    @IBAction func translationPress(sender: AnyObject) {
+        self.viewBieuDo.translateView()
+    }
+    @IBAction func scalePress(sender: AnyObject) {
+        self.viewBieuDo.scaleVIew()
+    }
+    
 
+    @IBAction func rotatePress(sender: AnyObject) {
+        self.viewBieuDo.rotateView()
+    }
 }
 
