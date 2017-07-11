@@ -19,7 +19,7 @@
     
 
 ## Cơ chế hoạt động
-Ứng dụng sử dụng trên nền tàng mdclib.
+Ứng dụng sử dụng trên nền tàng Mdclib.
 Người dùng A chat với người dùng B thì :
 
     A gọi lên server create 1 conversation cho A và B. Server trả về id conversation.
@@ -43,8 +43,18 @@ Thư viện yêu cầu :
     
 
 ## Cài đặt
+### Podfile
+pod 'MdcLib-Skyprepare'
+
+pod 'AFNetworking'
+
+### Cài đặt khác
+
+Disable bitcode (Enable BitCode = NO)
+
 ## Sử dụng
 ### Khởi tạo thư viện
+#### Khai báo thư viện trong AppDelegate
 
 ```swift
 #import "AppDelegate.h"
@@ -52,6 +62,16 @@ Thư viện yêu cầu :
 @interface AppDelegate ()<MdcChatManagerDelegate>
 @property(strong,nonatomic) MdcLibManager * mdcChatManager;
 ```
+
+#### Khởi tạo thư viện trong didFinishLaunchingWithOptions
+
+```swift
+self.mdcChatManager = [MdcLibManager sharedInstance:launchOptions];
+[self.mdcChatManager configTokenAndAppKeyLaunchOptions:nil];
+```
+
+#### Cài đặt 1 số thuộc tính của thư viện
+
 
 ### Action
 #### Register user
