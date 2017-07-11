@@ -11,6 +11,7 @@
         * [Khởi tạo thư viện trong didFinishLaunchingWithOptions](#khởi-tạo-thư-viện-trong-didfinishlaunchingwithoptions)
     * [Action](#action)
         * [Register user](#register-user)
+        * [Logout user](#logout-user)
         * [Get time stamp milisecond](#get-time-stamp-milisecond)
         * [Get history messages](#get-history-messages)
         * [Join conversation](#join-conversation)
@@ -124,6 +125,18 @@ Sử dụng :
 [[MdcLibManager sharedInstance] registerUser:@"linhcanthai@gmail.com" :@"linhcanthai"];
 ```
 
+#### Logout user
+Tên hàm :
+
+```swift
+-(void)userLogout;
+```
+Sử dụng :
+
+```swift
+[[MdcLibManager sharedInstance] userLogout];
+```
+
 #### Get time stamp milisecond
 
 Tên hàm :
@@ -218,13 +231,44 @@ Sử dụng :
 
 
 ### Delegate
+
+Để sử dụng Delegate của thư viện bạn phải khai báo delegate trong ViewController
+```swift
+@interface ViewController ()<MdcChatManagerDelegate>
+```
+
 #### Did Connect
-Sử dụng :
+Khi đăng ký người dùng (người dùng định danh và người dùng không có định danh) với server thành công thì sẽ nhảy vào hàm :
 
 ```swift
-
+-(void)didConnect{
+    NSLog(@"connect thanh cong");
+}
 ```
 
 #### Did Disconnect
+Khi người dùng (người dùng định danh và người dùng không có định danh) logout ra khỏi server thì sẽ nhảy vào hàm :
+
+```swift
+-(void)didDisconnect{
+    NSLog(@"disconnect roi");
+}
+```
+
 #### Did Receive Message From Conversation
+Khi có 1 tin nhắn từ 1 người dùng khác thì sẽ nhảy vào hàm :
+
+```swift
+-(void)didReceiveMessageFromConversation:(NSDictionary *)mesg{
+    NSLog(@"didReceiveMessageFromConversation : %@",mesg);
+}
+```
+
 #### Did Receive Message From System
+Khi có tin nhắn từ server thì sẽ nhảy vào hàm :
+
+```swift
+-(void)didReceiveMessageFromSystem:(NSArray *)arr{
+    NSLog(@"didReceiveMessageFromSystem : %@",arr);
+}
+```
