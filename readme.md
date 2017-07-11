@@ -1,5 +1,5 @@
 # Table of contents
-* [Cơ chế hoạt động](#configuring-an-app-for-push-notifications)
+* [Cơ chế hoạt động](#co-che-hoat-dong)
 	* [Enabling the Push Notification Service](#enabling-the-push-notification-service)
 	* [Registering for Push Notifications](#registering-for-push-notifications)
     * [Creating an SSL Certificate and PEM file](#creating-an-ssl-certificate-and-pem-file)
