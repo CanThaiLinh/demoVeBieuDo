@@ -1,5 +1,5 @@
 # Table of contents
-* [Configuring an App for Push Notifications](#configuring-an-app-for-push-notifications)
+* [Cơ chế hoạt động](#configuring-an-app-for-push-notifications)
 	* [Enabling the Push Notification Service](#enabling-the-push-notification-service)
 	* [Registering for Push Notifications](#registering-for-push-notifications)
     * [Creating an SSL Certificate and PEM file](#creating-an-ssl-certificate-and-pem-file)
@@ -18,7 +18,7 @@ Tổng quan của Push Remote Notification được thể hiện thông qua sơ 
 
 ![](image/Push-Overview-2.jpg)
 
-# Configuring an App for Push Notifications
+# Cơ chế hoạt động
 
 ## Enabling the Push Notification Service
 
